@@ -1,7 +1,7 @@
-from animal import Animal
+from src.organisms.animal import Animal
 from tkinter import *
 from PIL import ImageTk, Image
-from sosnowsky_hogweed import SosnowskyHogweed
+from src.organisms.sosnowsky_hogweed import SosnowskyHogweed
 
 
 class CyberSheep(Animal):
@@ -10,7 +10,7 @@ class CyberSheep(Animal):
         self._name = "Cyber sheep"
 
     def draw(self, size, window, x, y):
-        img = Image.open("img/cyber_sheep.png")
+        img = Image.open("../img/cyber_sheep.png")
         img = img.resize((size, size))
         img = ImageTk.PhotoImage(img)
         image = Label(window, image=img)

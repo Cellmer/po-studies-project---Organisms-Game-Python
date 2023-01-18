@@ -1,4 +1,4 @@
-from animal import Animal
+from src.organisms.animal import Animal
 from tkinter import *
 from PIL import ImageTk, Image
 import random
@@ -10,7 +10,7 @@ class Turtle(Animal):
         self._name = "Turtle"
 
     def draw(self, size, window, x, y):
-        img = Image.open("img/turtle.png")
+        img = Image.open("../img/turtle.png")
         img = img.resize((size, size))
         img = ImageTk.PhotoImage(img)
         image = Label(window, image=img)

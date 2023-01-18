@@ -1,4 +1,4 @@
-from animal import Animal
+from src.organisms.animal import Animal
 from tkinter import *
 from PIL import ImageTk, Image
 
@@ -11,7 +11,7 @@ class Human(Animal):
         self._count_immortality = 0
 
     def draw(self, size, window, x, y):
-        img = Image.open("img/human.png")
+        img = Image.open("../img/human.png")
         img = img.resize((size, size))
         img = ImageTk.PhotoImage(img)
         image = Label(window, image=img)

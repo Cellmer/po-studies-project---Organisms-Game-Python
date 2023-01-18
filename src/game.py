@@ -108,7 +108,7 @@ class Game:
 
     def load_game_state(self):
         try:
-            file = open("game_state.txt", "r")
+            file = open("../game_state.txt", "r")
             self.root.destroy()
             width = int(file.readline())
             height = int(file.readline())

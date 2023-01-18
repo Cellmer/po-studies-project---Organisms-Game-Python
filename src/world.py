@@ -1,18 +1,18 @@
 from field import Field
 from tkinter import *
 import random
-from human import Human
-from wolf import Wolf
-from sheep import Sheep
-from fox import Fox
-from turtle import Turtle
-from antelope import Antelope
-from grass import Grass
-from sonchus import Sonchus
-from guarana import Guarana
-from belladonna import Belladonna
-from sosnowsky_hogweed import SosnowskyHogweed
-from cyber_sheep import CyberSheep
+from src.organisms.human import Human
+from src.organisms.wolf import Wolf
+from src.organisms.sheep import Sheep
+from src.organisms.fox import Fox
+from src.organisms.turtle import Turtle
+from src.organisms.antelope import Antelope
+from src.organisms.grass import Grass
+from src.organisms.sonchus import Sonchus
+from src.organisms.guarana import Guarana
+from src.organisms.belladonna import Belladonna
+from src.organisms.sosnowsky_hogweed import SosnowskyHogweed
+from src.organisms.cyber_sheep import CyberSheep
 
 
 class World:
@@ -203,7 +203,7 @@ class World:
         self.erase_dead()
 
     def save_game_state(self):
-        file = open("game_state.txt", "w")
+        file = open("../game_state.txt", "w")
         file.write(str(self.__width) + "\n")
         file.write(str(self.__height) + "\n")
 
@@ -219,7 +219,7 @@ class World:
         file.close()
 
     def load_game(self):
-        file = open("game_state.txt", "r")
+        file = open("../game_state.txt", "r")
         width = int(file.readline())
         height = int(file.readline())
 

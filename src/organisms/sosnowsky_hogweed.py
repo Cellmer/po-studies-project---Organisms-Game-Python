@@ -1,5 +1,5 @@
-from plant import Plant
-from animal import Animal
+from src.organisms.plant import Plant
+from src.organisms.animal import Animal
 from tkinter import *
 from PIL import ImageTk, Image
 import random
@@ -11,7 +11,7 @@ class SosnowskyHogweed(Plant):
         self._name = "Sosnowsky hogweed"
 
     def draw(self, size, window, x, y):
-        img = Image.open("img/sosnowsky_hogweed.png")
+        img = Image.open("../img/sosnowsky_hogweed.png")
         img = img.resize((size, size))
         img = ImageTk.PhotoImage(img)
         image = Label(window, image=img)

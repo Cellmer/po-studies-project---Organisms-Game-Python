@@ -1,4 +1,4 @@
-from plant import Plant
+from src.organisms.plant import Plant
 from tkinter import *
 from PIL import ImageTk, Image
 
@@ -9,7 +9,7 @@ class Sonchus(Plant):
         self._name = "Sonchus"
 
     def draw(self, size, window, x, y):
-        img = Image.open("img/sonchus.png")
+        img = Image.open("../img/sonchus.png")
         img = img.resize((size, size))
         img = ImageTk.PhotoImage(img)
         image = Label(window, image=img)

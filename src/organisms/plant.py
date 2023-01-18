@@ -1,4 +1,4 @@
-from organism import Organism
+from src.organisms.organism import Organism
 import random
 from tkinter import *
 

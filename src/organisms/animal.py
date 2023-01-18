@@ -1,4 +1,4 @@
-from organism import Organism
+from src.organisms.organism import Organism
 from tkinter import *
 from abc import abstractmethod
 

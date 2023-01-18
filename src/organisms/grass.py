@@ -1,15 +1,15 @@
-from animal import Animal
+from src.organisms.plant import Plant
 from tkinter import *
 from PIL import ImageTk, Image
 
 
-class Wolf(Animal):
+class Grass(Plant):
     def __init__(self, field, world):
-        super().__init__(field, 9, 5, world)
-        self._name = "Wolf"
+        super().__init__(field, 0, world)
+        self._name = "Grass"
 
     def draw(self, size, window, x, y):
-        img = Image.open("img/wolf.png")
+        img = Image.open("../img/grass.png")
         img = img.resize((size, size))
         img = ImageTk.PhotoImage(img)
         image = Label(window, image=img)
@@ -17,4 +17,4 @@ class Wolf(Animal):
         image.place(x=x * size, y=y * size)
 
     def create_new(self, field, world):
-        return Wolf(field, world)
+        return Grass(field, world)
